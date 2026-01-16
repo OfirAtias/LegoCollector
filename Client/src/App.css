@@ -1,42 +1,135 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap");
+
+:root {
+  font-family: "Fredoka", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  place-items: unset;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: #f0f0f0;
+  background-image: radial-gradient(#d0d0d0 15%, transparent 16%),
+    radial-gradient(#d0d0d0 15%, transparent 16%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.App {
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 50px;
   text-align: center;
+  max-width: 800px;
+  width: 90%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.lego-header {
+  background-color: #ffd700;
+  color: #333;
+  padding: 20px;
+  border-bottom: 5px solid #d4b300;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lego-header h1 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.lego-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #333;
+  box-shadow: 8px 8px 0px #333;
+  margin: 20px auto;
+  max-width: 400px;
 }
 
-.card {
-  padding: 2em;
+.lego-input {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 16px;
+
+  color: #333 !important;
+  background-color: #fff !important;
+
+  transition: 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.lego-input:focus {
+  border-color: #0055bf;
+  outline: none;
+  background-color: #eef6ff !important;
+}
+
+.lego-input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.lego-btn {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.1s;
+  margin-top: 10px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+.lego-btn:active {
+  transform: translateY(4px);
+  border-bottom: 0px solid transparent;
+}
+
+.btn-red {
+  background-color: #da291c;
+  color: white;
+}
+.btn-blue {
+  background-color: #0055bf;
+  color: white;
+}
+.btn-green {
+  background-color: #237841;
+  color: white;
+}
+
+.lego-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lego-item {
+  background-color: white;
+  border-left: 10px solid;
+  margin-bottom: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  color: #333;
 }

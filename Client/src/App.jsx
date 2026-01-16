@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import Login from "./Login";
+import LegoList from "./LegoList";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setToken] = useState(null);
+
+  const handleLogin = (receivedToken) => {
+    setToken(receivedToken);
+  };
+
+  const handleLogout = () => {
+    setToken(null);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <header className="lego-header">
+        <h1>Lego Collector 🧱</h1>
+        {token && (
+          <button className="lego-btn btn-red" onClick={handleLogout}>
+            Logout
+          </button>
+        )}
+      </header>
+
+      <main>
+        {!token ? <Login onLogin={handleLogin} /> : <LegoList token={token} />}
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
