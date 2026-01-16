@@ -30,3 +30,9 @@ npm install
 npm run dev
 Click the link shown in the terminal (usually http://localhost:5173) to open the app.
 ```
+
+🔑 Login Credentials
+To access the system, use the following credentials:
+
+Username: admin
+Password: 1234
