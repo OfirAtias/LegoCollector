@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ibjgLVpDscE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ofir8\\OneDrive\\שולחן העבודה\\LegoCollector\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ofir8\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.11\\microsoft.aspnetcore.openapi.9.0.11.nupkg.sha512",
+    "C:\\Users\\ofir8\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
